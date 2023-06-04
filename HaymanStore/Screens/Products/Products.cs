@@ -46,5 +46,11 @@ namespace HaymanStore.Screens.Products
 
             }
         }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            ProductsManagement frm = new ProductsManagement();
+            frm.Show();
+        }
     }
 }   

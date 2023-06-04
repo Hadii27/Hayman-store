@@ -13,7 +13,7 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>publish\</PublishUrl>
+    <PublishUrl>C:\Users\VV\Desktop\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationRevision>4</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -66,6 +66,9 @@
   </PropertyGroup>
   <PropertyGroup>
     <ManifestKeyFile>HaymanStore_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>software-engineer.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -276,10 +279,15 @@
     <Content Include="Images\login-button-icon-25.jpg" />
     <Content Include="Images\login-button-icon-5.jpg" />
     <Content Include="Images\login-button-png-4.jpg" />
+    <Content Include="Images\main-menu.png" />
+    <Content Include="Images\menu-bar.png" />
+    <Content Include="Images\menu.png" />
     <Content Include="Images\plus.png" />
     <Content Include="Images\profile.png" />
     <Content Include="Images\rating.png" />
     <Content Include="Images\save-button-icon-5.jpg" />
+    <Content Include="Images\software-engineer.png" />
+    <Content Include="software-engineer.ico" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

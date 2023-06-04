@@ -64,5 +64,11 @@ namespace HaymanStore.Screens.Customers
             dataGridView1.DataSource = db.Customers.Where(x => x.Phone.Contains(txtPhone2.Text)).ToList();
 
         }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            NewCustomers frm = new NewCustomers();
+            frm.Show();
+        }
     }
 }

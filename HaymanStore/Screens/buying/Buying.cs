@@ -14,7 +14,7 @@ namespace HaymanStore.Screens.buying
 {
     public partial class Buying : Form
     {
-        Juxon_storeEntities db = new Juxon_storeEntities ();
+        Juxon_storeEntities db = new Juxon_storeEntities();
         int id;
         
         public Buying()

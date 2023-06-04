@@ -72,5 +72,11 @@ namespace HaymanStore.Screens.Products
             dataGridView1.DataSource = db.Products.Where(x => x.Name.Contains(txtName2.Text)).ToList();
 
         }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            Products frm = new Products();
+            frm.ShowDialog();
+        }
     }
 }
