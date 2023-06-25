@@ -78,8 +78,9 @@ namespace HaymanStore.Screens
         {
             if (sidebarExpand)
             {
-                sideBar.Width -= 10;
-                if (sideBar.Width == sideBar.MinimumSize.Width)
+                Sidebar.Width -= 10;
+                LogoutPanel.Width -= 10;
+                if (LogoutPanel.Width == LogoutPanel.MinimumSize.Width & Sidebar.Width == Sidebar.MinimumSize.Width)
                 {
                     sidebarExpand = false;
                     SidebarTimer.Stop();
@@ -88,8 +89,9 @@ namespace HaymanStore.Screens
             }
             else
             {
-                sideBar.Width += 10;
-                if (sideBar.Width == sideBar.MaximumSize.Width)
+                Sidebar.Width += 10;
+                LogoutPanel.Width += 10;
+                if (LogoutPanel.Width == LogoutPanel.MaximumSize.Width & Sidebar.Width == Sidebar.MaximumSize.Width)
                 {
                     sidebarExpand = true;
                     SidebarTimer.Stop();
@@ -104,7 +106,36 @@ namespace HaymanStore.Screens
 
         private void sideBar_Paint(object sender, PaintEventArgs e)
         {
-            sideBar.BringToFront();
+            LogoutPanel.BringToFront();
+        }
+
+        private void ProductTimer_Tick(object sender, EventArgs e)
+        {
+            if (productExpand)
+            {
+                ProductPanel.Height -= 10;
+                if (ProductPanel.Height == ProductPanel.MinimumSize.Height)
+                {
+                    productExpand = false;
+                    ProductTimer.Stop();
+
+                }
+            }
+            else
+            {
+                ProductPanel.Height += 10;
+                if (ProductPanel.Height == ProductPanel.MaximumSize.Height)
+                {
+                    productExpand = true;
+                    ProductTimer.Stop();
+                }
+            }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            ProductTimer.Start();
+
         }
     }
 }
