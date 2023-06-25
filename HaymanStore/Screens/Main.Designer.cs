@@ -307,6 +307,7 @@
             this.button3.Text = "              Edit Products";
             this.button3.UseMnemonic = false;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // panel3
             // 

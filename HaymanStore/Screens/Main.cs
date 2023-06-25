@@ -29,11 +29,7 @@ namespace HaymanStore.Screens
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            Products.ProductsManagement frm = new Products.ProductsManagement();
-            frm.Show();
-        }
+       
 
         private void button5_Click(object sender, EventArgs e)
         {
@@ -49,8 +45,8 @@ namespace HaymanStore.Screens
 
         private void button2_Click(object sender, EventArgs e)
         {
-            buying.Buying frm = new buying.Buying();
-            frm.Show();
+           BuyingControl uc = new BuyingControl();
+            addUsercontrol(uc);
         }
 
 
@@ -136,6 +132,12 @@ namespace HaymanStore.Screens
         {
             ProductTimer.Start();
 
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            ManageProduct uc = new ManageProduct();
+            addUsercontrol(uc);
         }
     }
 }
