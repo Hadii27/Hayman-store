@@ -69,8 +69,8 @@ namespace HaymanStore.Screens
         {
             if (sidebarExpand)
             {
-                flowLayoutPanel1.Width -= 10;
-                if (flowLayoutPanel1.Width == flowLayoutPanel1.MinimumSize.Width)
+                sideBar.Width -= 10;
+                if (sideBar.Width == sideBar.MinimumSize.Width)
                 {
                     sidebarExpand = false;
                     SidebarTimer.Stop();
@@ -79,8 +79,8 @@ namespace HaymanStore.Screens
             }
             else
             {
-                flowLayoutPanel1.Width += 10;
-                if (flowLayoutPanel1.Width == flowLayoutPanel1.MaximumSize.Width)
+                sideBar.Width += 10;
+                if (sideBar.Width == sideBar.MaximumSize.Width)
                 {
                     sidebarExpand = true;
                     SidebarTimer.Stop();
@@ -93,33 +93,8 @@ namespace HaymanStore.Screens
             SidebarTimer.Start();
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            ProductTimer.Start();
+     
 
-        }
-
-        private void ProductTimer_Tick(object sender, EventArgs e)
-        {
-            if (productExpand)
-            {
-                panel1.Height -= 10;
-                if (panel1.Height == panel1.MinimumSize.Height)
-                {
-                    productExpand = false;
-                    ProductTimer.Stop();
-
-                }
-            }
-            else
-            {
-                panel1.Height += 10;
-                if (panel1.Height == panel1.MaximumSize.Height)
-                {
-                    productExpand = true;
-                    ProductTimer.Stop();
-                }
-            }
-        }
+        
     }
 }
