@@ -93,8 +93,6 @@ namespace HaymanStore.Screens
             SidebarTimer.Start();
         }
 
-     
-
-        
+             
     }
 }
