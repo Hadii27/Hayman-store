@@ -9,13 +9,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace HaymanStore.Screens.Products
+namespace HaymanStore.Screens
 {
-    public partial class Products : Form
+    public partial class ProductsControl : UserControl
     {
         Juxon_storeEntities db = new Juxon_storeEntities();
 
-        public Products()
+        public ProductsControl()
         {
             InitializeComponent();
         }
@@ -46,11 +46,5 @@ namespace HaymanStore.Screens.Products
 
             }
         }
-
-        private void button14_Click(object sender, EventArgs e)
-        {
-            ProductsManagement frm = new ProductsManagement();
-            frm.Show();
-        }
     }
-}   
+}

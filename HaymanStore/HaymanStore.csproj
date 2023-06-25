@@ -173,6 +173,12 @@
     <Compile Include="Screens\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\ProductsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\ProductsControl.Designer.cs">
+      <DependentUpon>ProductsControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\Products\Products.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -217,6 +223,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\ProductsControl.resx">
+      <DependentUpon>ProductsControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Products\Products.resx">
       <DependentUpon>Products.cs</DependentUpon>

@@ -19,7 +19,15 @@ namespace HaymanStore.Screens
         {
             InitializeComponent();
         }
+        
+        private void addUsercontrol(UserControl userControl)
+        {
+            userControl.Dock = DockStyle.Fill;
+            panelContainer.Controls.Clear();
+            panelContainer.Controls.Add(userControl);
 
+        }
+        
         private void button3_Click(object sender, EventArgs e)
         {
             Products.ProductsManagement frm = new Products.ProductsManagement();
@@ -48,8 +56,8 @@ namespace HaymanStore.Screens
 
         private void button14_Click(object sender, EventArgs e)
         {
-            Products.ProductsManagement frm = new Products.ProductsManagement();
-            frm.Show();
+            ProductsControl uc = new ProductsControl();
+            addUsercontrol(uc);
         }
 
 
@@ -93,6 +101,9 @@ namespace HaymanStore.Screens
             SidebarTimer.Start();
         }
 
-             
+        private void sideBar_Paint(object sender, PaintEventArgs e)
+        {
+            sideBar.BringToFront();
+        }
     }
 }

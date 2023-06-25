@@ -42,8 +42,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.SidebarTimer = new System.Windows.Forms.Timer(this.components);
             this.sideBar = new System.Windows.Forms.Panel();
+            this.panelContainer = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.sideBar.SuspendLayout();
+            this.panelContainer.SuspendLayout();
             this.SuspendLayout();
             // 
             // button5
@@ -192,7 +194,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 72F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label1.Location = new System.Drawing.Point(568, 191);
+            this.label1.Location = new System.Drawing.Point(608, 218);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(331, 136);
             this.label1.TabIndex = 30;
@@ -205,7 +207,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label2.Location = new System.Drawing.Point(803, 321);
+            this.label2.Location = new System.Drawing.Point(843, 348);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(123, 52);
             this.label2.TabIndex = 31;
@@ -227,12 +229,23 @@
             this.sideBar.Controls.Add(this.button1);
             this.sideBar.Controls.Add(this.button4);
             this.sideBar.Controls.Add(this.button13);
-            this.sideBar.Location = new System.Drawing.Point(-1, 0);
+            this.sideBar.Location = new System.Drawing.Point(0, 0);
             this.sideBar.MaximumSize = new System.Drawing.Size(205, 627);
             this.sideBar.MinimumSize = new System.Drawing.Size(37, 627);
             this.sideBar.Name = "sideBar";
             this.sideBar.Size = new System.Drawing.Size(43, 627);
             this.sideBar.TabIndex = 36;
+            this.sideBar.Paint += new System.Windows.Forms.PaintEventHandler(this.sideBar_Paint);
+            // 
+            // panelContainer
+            // 
+            this.panelContainer.Controls.Add(this.label1);
+            this.panelContainer.Controls.Add(this.sideBar);
+            this.panelContainer.Controls.Add(this.label2);
+            this.panelContainer.Location = new System.Drawing.Point(0, -2);
+            this.panelContainer.Name = "panelContainer";
+            this.panelContainer.Size = new System.Drawing.Size(1251, 629);
+            this.panelContainer.TabIndex = 37;
             // 
             // Main
             // 
@@ -240,9 +253,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(1250, 626);
-            this.Controls.Add(this.sideBar);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.panelContainer);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Main";
@@ -251,8 +262,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.sideBar.ResumeLayout(false);
             this.sideBar.PerformLayout();
+            this.panelContainer.ResumeLayout(false);
+            this.panelContainer.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -269,5 +281,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Timer SidebarTimer;
         private System.Windows.Forms.Panel sideBar;
+        private System.Windows.Forms.Panel panelContainer;
     }
 }
