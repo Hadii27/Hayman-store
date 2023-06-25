@@ -21,7 +21,6 @@ namespace HaymanStore.Screens
         {
             InitializeComponent();
             dataGridView1.DataSource = db.Customers.ToList();
-
         }
 
         private void button1_Click(object sender, EventArgs e)

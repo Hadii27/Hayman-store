@@ -43,8 +43,8 @@ namespace HaymanStore.Screens
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Bills.Bill frm = new Bills.Bill();
-            frm.Show();
+           BillsControl uc = new BillsControl();
+            addUsercontrol(uc);
         }
 
         private void button2_Click(object sender, EventArgs e)
