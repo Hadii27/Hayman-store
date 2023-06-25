@@ -173,17 +173,17 @@
     <Compile Include="Screens\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\ManageCustomersControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\ManageCustomersControl.Designer.cs">
+      <DependentUpon>ManageCustomersControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\ProductsControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Screens\ProductsControl.Designer.cs">
       <DependentUpon>ProductsControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Screens\Products\Products.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Screens\Products\Products.Designer.cs">
-      <DependentUpon>Products.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\Products\ProductsManagement.cs">
       <SubType>Form</SubType>
@@ -224,11 +224,11 @@
     <EmbeddedResource Include="Screens\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screens\ManageCustomersControl.resx">
+      <DependentUpon>ManageCustomersControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\ProductsControl.resx">
       <DependentUpon>ProductsControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Products\Products.resx">
-      <DependentUpon>Products.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Products\ProductsManagement.resx">
       <DependentUpon>ProductsManagement.cs</DependentUpon>

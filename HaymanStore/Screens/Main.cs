@@ -18,8 +18,9 @@ namespace HaymanStore.Screens
         public Main()
         {
             InitializeComponent();
+
         }
-        
+
         private void addUsercontrol(UserControl userControl)
         {
             userControl.Dock = DockStyle.Fill;
@@ -27,7 +28,7 @@ namespace HaymanStore.Screens
             panelContainer.Controls.Add(userControl);
 
         }
-        
+
         private void button3_Click(object sender, EventArgs e)
         {
             Products.ProductsManagement frm = new Products.ProductsManagement();
@@ -36,8 +37,8 @@ namespace HaymanStore.Screens
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Customers.ManageCustomer frm = new Customers.ManageCustomer() ;
-            frm.Show();
+           ManageCustomersControl uc = new ManageCustomersControl();
+            addUsercontrol(uc);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -58,8 +59,8 @@ namespace HaymanStore.Screens
         {
             ProductsControl uc = new ProductsControl();
             addUsercontrol(uc);
+            uc.Show();
         }
-
 
 
         private void button13_Click(object sender, EventArgs e)

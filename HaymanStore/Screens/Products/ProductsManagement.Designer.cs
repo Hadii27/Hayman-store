@@ -300,7 +300,6 @@
             this.button14.Text = "Add Products";
             this.button14.UseMnemonic = false;
             this.button14.UseVisualStyleBackColor = false;
-            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // ProductsManagement
             // 

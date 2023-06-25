@@ -73,10 +73,6 @@ namespace HaymanStore.Screens.Products
 
         }
 
-        private void button14_Click(object sender, EventArgs e)
-        {
-            Products frm = new Products();
-            frm.ShowDialog();
-        }
+    
     }
 }

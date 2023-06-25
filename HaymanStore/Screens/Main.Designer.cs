@@ -178,7 +178,7 @@
             this.button13.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.button13.Image = ((System.Drawing.Image)(resources.GetObject("button13.Image")));
             this.button13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button13.Location = new System.Drawing.Point(0, 577);
+            this.button13.Location = new System.Drawing.Point(0, 720);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(202, 50);
             this.button13.TabIndex = 31;
@@ -194,7 +194,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 72F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label1.Location = new System.Drawing.Point(608, 218);
+            this.label1.Location = new System.Drawing.Point(655, 304);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(331, 136);
             this.label1.TabIndex = 30;
@@ -207,7 +207,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label2.Location = new System.Drawing.Point(843, 348);
+            this.label2.Location = new System.Drawing.Point(890, 434);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(123, 52);
             this.label2.TabIndex = 31;
@@ -220,6 +220,8 @@
             // 
             // sideBar
             // 
+            this.sideBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.sideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.sideBar.Controls.Add(this.button14);
             this.sideBar.Controls.Add(this.label9);
@@ -229,22 +231,21 @@
             this.sideBar.Controls.Add(this.button1);
             this.sideBar.Controls.Add(this.button4);
             this.sideBar.Controls.Add(this.button13);
-            this.sideBar.Location = new System.Drawing.Point(0, 0);
-            this.sideBar.MaximumSize = new System.Drawing.Size(205, 627);
-            this.sideBar.MinimumSize = new System.Drawing.Size(37, 627);
+            this.sideBar.Location = new System.Drawing.Point(0, -4);
+            this.sideBar.MaximumSize = new System.Drawing.Size(205, 770);
+            this.sideBar.MinimumSize = new System.Drawing.Size(37, 770);
             this.sideBar.Name = "sideBar";
-            this.sideBar.Size = new System.Drawing.Size(43, 627);
+            this.sideBar.Size = new System.Drawing.Size(205, 770);
             this.sideBar.TabIndex = 36;
             this.sideBar.Paint += new System.Windows.Forms.PaintEventHandler(this.sideBar_Paint);
             // 
             // panelContainer
             // 
             this.panelContainer.Controls.Add(this.label1);
-            this.panelContainer.Controls.Add(this.sideBar);
             this.panelContainer.Controls.Add(this.label2);
-            this.panelContainer.Location = new System.Drawing.Point(0, -2);
+            this.panelContainer.Location = new System.Drawing.Point(41, -2);
             this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(1251, 629);
+            this.panelContainer.Size = new System.Drawing.Size(1344, 800);
             this.panelContainer.TabIndex = 37;
             // 
             // Main
@@ -252,8 +253,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(1250, 626);
+            this.ClientSize = new System.Drawing.Size(1384, 761);
             this.Controls.Add(this.panelContainer);
+            this.Controls.Add(this.sideBar);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Main";
