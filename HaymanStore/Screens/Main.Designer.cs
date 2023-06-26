@@ -43,6 +43,7 @@
             this.SidebarTimer = new System.Windows.Forms.Timer(this.components);
             this.LogoutPanel = new System.Windows.Forms.Panel();
             this.panelContainer = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Sidebar = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -51,15 +52,14 @@
             this.button7 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.ProductTimer = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.LogoutPanel.SuspendLayout();
             this.panelContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.Sidebar.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.ProductPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // button5
@@ -72,7 +72,7 @@
             this.button5.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(0, 0);
+            this.button5.Location = new System.Drawing.Point(0, 3);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(197, 32);
             this.button5.TabIndex = 32;
@@ -91,7 +91,7 @@
             this.button4.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(3, 258);
+            this.button4.Location = new System.Drawing.Point(3, 215);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(205, 36);
             this.button4.TabIndex = 22;
@@ -110,7 +110,7 @@
             this.button2.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(3, 171);
+            this.button2.Location = new System.Drawing.Point(3, 128);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(202, 37);
             this.button2.TabIndex = 32;
@@ -129,7 +129,7 @@
             this.button1.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(3, 214);
+            this.button1.Location = new System.Drawing.Point(3, 171);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(205, 38);
             this.button1.TabIndex = 19;
@@ -248,6 +248,7 @@
             // 
             // panelContainer
             // 
+            this.panelContainer.Controls.Add(this.panel3);
             this.panelContainer.Controls.Add(this.pictureBox2);
             this.panelContainer.Controls.Add(this.label1);
             this.panelContainer.Controls.Add(this.label2);
@@ -256,11 +257,20 @@
             this.panelContainer.Size = new System.Drawing.Size(1344, 800);
             this.panelContainer.TabIndex = 37;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(1296, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(35, 34);
+            this.pictureBox2.TabIndex = 32;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
             // Sidebar
             // 
             this.Sidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.Sidebar.Controls.Add(this.panel1);
-            this.Sidebar.Controls.Add(this.panel3);
             this.Sidebar.Controls.Add(this.button2);
             this.Sidebar.Controls.Add(this.button1);
             this.Sidebar.Controls.Add(this.button4);
@@ -285,11 +295,11 @@
             // 
             this.panel3.Controls.Add(this.button5);
             this.panel3.Controls.Add(this.button6);
-            this.panel3.Location = new System.Drawing.Point(3, 128);
+            this.panel3.Location = new System.Drawing.Point(252, 143);
             this.panel3.MaximumSize = new System.Drawing.Size(197, 74);
             this.panel3.MinimumSize = new System.Drawing.Size(197, 37);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(197, 37);
+            this.panel3.Size = new System.Drawing.Size(197, 74);
             this.panel3.TabIndex = 34;
             // 
             // button6
@@ -309,13 +319,14 @@
             this.button6.Text = "              Add Customer";
             this.button6.UseMnemonic = false;
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // ProductPanel
             // 
             this.ProductPanel.Controls.Add(this.button7);
             this.ProductPanel.Controls.Add(this.button3);
             this.ProductPanel.Controls.Add(this.button14);
-            this.ProductPanel.Location = new System.Drawing.Point(3, 300);
+            this.ProductPanel.Location = new System.Drawing.Point(3, 257);
             this.ProductPanel.MaximumSize = new System.Drawing.Size(205, 135);
             this.ProductPanel.MinimumSize = new System.Drawing.Size(205, 43);
             this.ProductPanel.Name = "ProductPanel";
@@ -365,16 +376,6 @@
             this.ProductTimer.Interval = 10;
             this.ProductTimer.Tick += new System.EventHandler(this.ProductTimer_Tick);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1296, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(35, 34);
-            this.pictureBox2.TabIndex = 32;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -394,12 +395,12 @@
             this.LogoutPanel.ResumeLayout(false);
             this.panelContainer.ResumeLayout(false);
             this.panelContainer.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.Sidebar.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.ProductPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
