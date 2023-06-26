@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices.Expando;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,17 +14,47 @@ namespace HaymanStore.Screens
     public partial class Main : Form
     {
         bool sidebarExpand;
-        bool productExpand;
         private login _login;
+        bool productExpand;
+        bool custExpand;
         public Main()
         {
             InitializeComponent();
+
 
         }
         public Main(login login)
         {
             InitializeComponent();
-            login = _login;
+              _login = login;
+        }
+        private void animation(Panel panel, Timer time, bool Expand)
+        {
+             if (Expand)
+            {
+                panel.Height -= 10;
+
+                if (panel.Height == panel.MinimumSize.Height)
+                {
+                    Expand = true;
+                    time.Stop();
+
+                }
+            }
+            else
+            {
+                panel.Height += 10;
+
+                if (panel.Height == panel.MaximumSize.Height)
+                {
+                    Expand = false;
+                    time.Stop();
+                }
+            }
+            
+
+            
+
         }
 
         private void addUsercontrol(UserControl userControl)
@@ -108,25 +139,7 @@ namespace HaymanStore.Screens
 
         private void ProductTimer_Tick(object sender, EventArgs e)
         {
-            if (productExpand)
-            {
-                ProductPanel.Height -= 10;
-                if (ProductPanel.Height == ProductPanel.MinimumSize.Height)
-                {
-                    productExpand = false;
-                    ProductTimer.Stop();
-
-                }
-            }
-            else
-            {
-                ProductPanel.Height += 10;
-                if (ProductPanel.Height == ProductPanel.MaximumSize.Height)
-                {
-                    productExpand = true;
-                    ProductTimer.Stop();
-                }
-            }
+            animation(ProductPanel, ProductTimer,productExpand);
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -144,25 +157,41 @@ namespace HaymanStore.Screens
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
         {
             var OpenForms = Application.OpenForms.Cast<Form>();
-            var isOpen = OpenForms.Any(q=> q.Name == "login");
+            var isOpen = OpenForms.Any(q => q.Name == "login");
             if (!isOpen)
             {
                 login frm = new login();
                 frm.Show();
-
             }
             else
             {
-                _login.Close();
+                _login.Show();
             }
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.Close();
+            _login.Close();
         }
 
         private void button6_Click(object sender, EventArgs e)
+        {
+            AddcustControl uc = new AddcustControl();
+            addUsercontrol(uc );
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            custTimer.Start();
+        }
+
+        private void custTimer_Tick(object sender, EventArgs e)
+        {
+            animation(panel3, custTimer, custExpand);
+        }
+
+        private void Sidebar_Paint_1(object sender, PaintEventArgs e)
         {
 
         }

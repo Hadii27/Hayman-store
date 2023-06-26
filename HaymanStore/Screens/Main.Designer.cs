@@ -44,22 +44,27 @@
             this.LogoutPanel = new System.Windows.Forms.Panel();
             this.panelContainer = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.Sidebar = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.Sidebar = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.ProductPanel = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.ProductTimer = new System.Windows.Forms.Timer(this.components);
+            this.custTimer = new System.Windows.Forms.Timer(this.components);
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.LogoutPanel.SuspendLayout();
             this.panelContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel3.SuspendLayout();
             this.Sidebar.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.ProductPanel.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // button5
@@ -72,11 +77,11 @@
             this.button5.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(0, 3);
+            this.button5.Location = new System.Drawing.Point(-3, 36);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(197, 32);
             this.button5.TabIndex = 32;
-            this.button5.Text = "              Customer";
+            this.button5.Text = "              Manage Customer";
             this.button5.UseMnemonic = false;
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
@@ -248,8 +253,7 @@
             // 
             // panelContainer
             // 
-            this.panelContainer.Controls.Add(this.panel3);
-            this.panelContainer.Controls.Add(this.pictureBox2);
+            this.panelContainer.Controls.Add(this.panel2);
             this.panelContainer.Controls.Add(this.label1);
             this.panelContainer.Controls.Add(this.label2);
             this.panelContainer.Location = new System.Drawing.Point(41, -2);
@@ -260,46 +264,23 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1296, 3);
+            this.pictureBox2.Location = new System.Drawing.Point(1295, 0);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(35, 34);
             this.pictureBox2.TabIndex = 32;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // Sidebar
-            // 
-            this.Sidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.Sidebar.Controls.Add(this.panel1);
-            this.Sidebar.Controls.Add(this.button2);
-            this.Sidebar.Controls.Add(this.button1);
-            this.Sidebar.Controls.Add(this.button4);
-            this.Sidebar.Controls.Add(this.ProductPanel);
-            this.Sidebar.Location = new System.Drawing.Point(0, -2);
-            this.Sidebar.MaximumSize = new System.Drawing.Size(194, 715);
-            this.Sidebar.MinimumSize = new System.Drawing.Size(49, 715);
-            this.Sidebar.Name = "Sidebar";
-            this.Sidebar.Size = new System.Drawing.Size(49, 715);
-            this.Sidebar.TabIndex = 33;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Location = new System.Drawing.Point(3, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 119);
-            this.panel1.TabIndex = 33;
-            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.button5);
             this.panel3.Controls.Add(this.button6);
-            this.panel3.Location = new System.Drawing.Point(252, 143);
-            this.panel3.MaximumSize = new System.Drawing.Size(197, 74);
-            this.panel3.MinimumSize = new System.Drawing.Size(197, 37);
+            this.panel3.Controls.Add(this.button8);
+            this.panel3.Location = new System.Drawing.Point(3, 306);
+            this.panel3.MaximumSize = new System.Drawing.Size(197, 107);
+            this.panel3.MinimumSize = new System.Drawing.Size(197, 34);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(197, 74);
+            this.panel3.Size = new System.Drawing.Size(197, 34);
             this.panel3.TabIndex = 34;
             // 
             // button6
@@ -312,7 +293,7 @@
             this.button6.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(0, 38);
+            this.button6.Location = new System.Drawing.Point(-3, 71);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(197, 32);
             this.button6.TabIndex = 33;
@@ -320,6 +301,51 @@
             this.button6.UseMnemonic = false;
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.Transparent;
+            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
+            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button8.Location = new System.Drawing.Point(-3, 2);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(197, 32);
+            this.button8.TabIndex = 35;
+            this.button8.Text = "              Customer";
+            this.button8.UseMnemonic = false;
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // Sidebar
+            // 
+            this.Sidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.Sidebar.Controls.Add(this.panel1);
+            this.Sidebar.Controls.Add(this.button2);
+            this.Sidebar.Controls.Add(this.button1);
+            this.Sidebar.Controls.Add(this.button4);
+            this.Sidebar.Controls.Add(this.ProductPanel);
+            this.Sidebar.Controls.Add(this.panel3);
+            this.Sidebar.Location = new System.Drawing.Point(0, 0);
+            this.Sidebar.MaximumSize = new System.Drawing.Size(194, 715);
+            this.Sidebar.MinimumSize = new System.Drawing.Size(49, 715);
+            this.Sidebar.Name = "Sidebar";
+            this.Sidebar.Size = new System.Drawing.Size(49, 715);
+            this.Sidebar.TabIndex = 33;
+            this.Sidebar.Paint += new System.Windows.Forms.PaintEventHandler(this.Sidebar_Paint_1);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 119);
+            this.panel1.TabIndex = 33;
             // 
             // ProductPanel
             // 
@@ -376,6 +402,32 @@
             this.ProductTimer.Interval = 10;
             this.ProductTimer.Tick += new System.EventHandler(this.ProductTimer_Tick);
             // 
+            // custTimer
+            // 
+            this.custTimer.Interval = 10;
+            this.custTimer.Tick += new System.EventHandler(this.custTimer_Tick);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.pictureBox2);
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1344, 85);
+            this.panel2.TabIndex = 33;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Transparent;
+            this.label3.Location = new System.Drawing.Point(585, 11);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(93, 33);
+            this.label3.TabIndex = 33;
+            this.label3.Text = "Home";
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -385,9 +437,11 @@
             this.Controls.Add(this.Sidebar);
             this.Controls.Add(this.panelContainer);
             this.Controls.Add(this.LogoutPanel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Main";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
@@ -396,11 +450,13 @@
             this.panelContainer.ResumeLayout(false);
             this.panelContainer.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel3.ResumeLayout(false);
             this.Sidebar.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel3.ResumeLayout(false);
             this.ProductPanel.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -428,5 +484,9 @@
         private System.Windows.Forms.Timer ProductTimer;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Timer custTimer;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label3;
     }
 }

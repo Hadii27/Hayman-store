@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BillsControl));
             this.label9 = new System.Windows.Forms.Label();
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -60,10 +61,15 @@
             this.button1 = new System.Windows.Forms.Button();
             this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.juxonstoreDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label9
@@ -73,7 +79,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(761, 64);
+            this.label9.Location = new System.Drawing.Point(961, 94);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(66, 27);
             this.label9.TabIndex = 52;
@@ -82,7 +88,7 @@
             // txtPhone
             // 
             this.txtPhone.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtPhone.Location = new System.Drawing.Point(313, 207);
+            this.txtPhone.Location = new System.Drawing.Point(515, 237);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(140, 20);
             this.txtPhone.TabIndex = 51;
@@ -94,7 +100,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(296, 165);
+            this.label8.Location = new System.Drawing.Point(498, 195);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(172, 27);
             this.label8.TabIndex = 50;
@@ -103,7 +109,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(1107, 12);
+            this.dateTimePicker1.Location = new System.Drawing.Point(1109, 124);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(220, 20);
             this.dateTimePicker1.TabIndex = 49;
@@ -120,7 +126,7 @@
             // 
             this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(622, 12);
+            this.comboBox1.Location = new System.Drawing.Point(174, 117);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(184, 21);
             this.comboBox1.TabIndex = 48;
@@ -149,7 +155,7 @@
             // txtStock
             // 
             this.txtStock.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtStock.Location = new System.Drawing.Point(730, 94);
+            this.txtStock.Location = new System.Drawing.Point(932, 124);
             this.txtStock.Name = "txtStock";
             this.txtStock.ReadOnly = true;
             this.txtStock.Size = new System.Drawing.Size(140, 20);
@@ -175,7 +181,7 @@
             // txtTotal
             // 
             this.txtTotal.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtTotal.Location = new System.Drawing.Point(752, 207);
+            this.txtTotal.Location = new System.Drawing.Point(954, 237);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.ReadOnly = true;
             this.txtTotal.Size = new System.Drawing.Size(140, 20);
@@ -188,7 +194,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(788, 165);
+            this.label7.Location = new System.Drawing.Point(990, 195);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(60, 27);
             this.label7.TabIndex = 45;
@@ -265,7 +271,7 @@
             // txtqty
             // 
             this.txtqty.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtqty.Location = new System.Drawing.Point(523, 207);
+            this.txtqty.Location = new System.Drawing.Point(725, 237);
             this.txtqty.Name = "txtqty";
             this.txtqty.Size = new System.Drawing.Size(140, 20);
             this.txtqty.TabIndex = 38;
@@ -278,7 +284,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(542, 165);
+            this.label5.Location = new System.Drawing.Point(744, 195);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(96, 27);
             this.label5.TabIndex = 37;
@@ -291,7 +297,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(476, 12);
+            this.label1.Location = new System.Drawing.Point(28, 117);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(118, 27);
             this.label1.TabIndex = 36;
@@ -311,7 +317,7 @@
             // txtPrice
             // 
             this.txtPrice.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtPrice.Location = new System.Drawing.Point(514, 94);
+            this.txtPrice.Location = new System.Drawing.Point(716, 124);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.ReadOnly = true;
             this.txtPrice.Size = new System.Drawing.Size(140, 20);
@@ -324,7 +330,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(546, 64);
+            this.label2.Location = new System.Drawing.Point(746, 94);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 27);
             this.label2.TabIndex = 33;
@@ -334,7 +340,7 @@
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button1.AutoSize = true;
-            this.button1.Location = new System.Drawing.Point(969, 203);
+            this.button1.Location = new System.Drawing.Point(1171, 233);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(108, 26);
             this.button1.TabIndex = 32;
@@ -346,11 +352,43 @@
             // 
             this.productsBindingSource.DataMember = "Products";
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel2.Controls.Add(this.label10);
+            this.panel2.Controls.Add(this.pictureBox2);
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1344, 85);
+            this.panel2.TabIndex = 54;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Transparent;
+            this.label10.Location = new System.Drawing.Point(585, 11);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(70, 33);
+            this.label10.TabIndex = 33;
+            this.label10.Text = "Bills";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(1294, 11);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(35, 34);
+            this.pictureBox2.TabIndex = 32;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
             // BillsControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtPhone);
             this.Controls.Add(this.label8);
@@ -380,6 +418,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.juxonstoreDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -418,5 +459,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.BindingSource productsBindingSource;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

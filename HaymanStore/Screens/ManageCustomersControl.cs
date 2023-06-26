@@ -1,5 +1,4 @@
 ﻿using HaymanStore.DB;
-using HaymanStore.Screens.Customers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -67,10 +66,9 @@ namespace HaymanStore.Screens
 
         }
 
-        private void button14_Click(object sender, EventArgs e)
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
-            NewCustomers frm = new NewCustomers();
-            frm.Show();
+            Application.Exit();
         }
     }
 }

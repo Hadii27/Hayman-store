@@ -120,5 +120,10 @@ namespace HaymanStore.Screens
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
