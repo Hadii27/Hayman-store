@@ -45,19 +45,21 @@
             this.panelContainer = new System.Windows.Forms.Panel();
             this.Sidebar = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.ProductPanel = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
-            this.ProductTimer = new System.Windows.Forms.Timer(this.components);
+            this.ProductPanel = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.ProductTimer = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.LogoutPanel.SuspendLayout();
             this.panelContainer.SuspendLayout();
             this.Sidebar.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.ProductPanel.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.ProductPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // button5
@@ -89,7 +91,7 @@
             this.button4.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(3, 239);
+            this.button4.Location = new System.Drawing.Point(3, 258);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(205, 36);
             this.button4.TabIndex = 22;
@@ -108,7 +110,7 @@
             this.button2.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(3, 152);
+            this.button2.Location = new System.Drawing.Point(3, 171);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(202, 37);
             this.button2.TabIndex = 32;
@@ -127,7 +129,7 @@
             this.button1.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(3, 195);
+            this.button1.Location = new System.Drawing.Point(3, 214);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(205, 38);
             this.button1.TabIndex = 19;
@@ -246,6 +248,7 @@
             // 
             // panelContainer
             // 
+            this.panelContainer.Controls.Add(this.pictureBox2);
             this.panelContainer.Controls.Add(this.label1);
             this.panelContainer.Controls.Add(this.label2);
             this.panelContainer.Location = new System.Drawing.Point(41, -2);
@@ -275,45 +278,14 @@
             this.panel1.Controls.Add(this.label9);
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 100);
+            this.panel1.Size = new System.Drawing.Size(200, 119);
             this.panel1.TabIndex = 33;
-            // 
-            // ProductPanel
-            // 
-            this.ProductPanel.Controls.Add(this.button7);
-            this.ProductPanel.Controls.Add(this.button3);
-            this.ProductPanel.Controls.Add(this.button14);
-            this.ProductPanel.Location = new System.Drawing.Point(3, 281);
-            this.ProductPanel.MaximumSize = new System.Drawing.Size(205, 135);
-            this.ProductPanel.MinimumSize = new System.Drawing.Size(205, 43);
-            this.ProductPanel.Name = "ProductPanel";
-            this.ProductPanel.Size = new System.Drawing.Size(205, 43);
-            this.ProductPanel.TabIndex = 33;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(0, 94);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(205, 41);
-            this.button3.TabIndex = 34;
-            this.button3.Text = "              Edit Products";
-            this.button3.UseMnemonic = false;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.button5);
             this.panel3.Controls.Add(this.button6);
-            this.panel3.Location = new System.Drawing.Point(3, 109);
+            this.panel3.Location = new System.Drawing.Point(3, 128);
             this.panel3.MaximumSize = new System.Drawing.Size(197, 74);
             this.panel3.MinimumSize = new System.Drawing.Size(197, 37);
             this.panel3.Name = "panel3";
@@ -338,10 +310,17 @@
             this.button6.UseMnemonic = false;
             this.button6.UseVisualStyleBackColor = false;
             // 
-            // ProductTimer
+            // ProductPanel
             // 
-            this.ProductTimer.Interval = 10;
-            this.ProductTimer.Tick += new System.EventHandler(this.ProductTimer_Tick);
+            this.ProductPanel.Controls.Add(this.button7);
+            this.ProductPanel.Controls.Add(this.button3);
+            this.ProductPanel.Controls.Add(this.button14);
+            this.ProductPanel.Location = new System.Drawing.Point(3, 300);
+            this.ProductPanel.MaximumSize = new System.Drawing.Size(205, 135);
+            this.ProductPanel.MinimumSize = new System.Drawing.Size(205, 43);
+            this.ProductPanel.Name = "ProductPanel";
+            this.ProductPanel.Size = new System.Drawing.Size(205, 43);
+            this.ProductPanel.TabIndex = 33;
             // 
             // button7
             // 
@@ -362,6 +341,40 @@
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(0, 94);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(205, 41);
+            this.button3.TabIndex = 34;
+            this.button3.Text = "              Edit Products";
+            this.button3.UseMnemonic = false;
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            // 
+            // ProductTimer
+            // 
+            this.ProductTimer.Interval = 10;
+            this.ProductTimer.Tick += new System.EventHandler(this.ProductTimer_Tick);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(1296, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(35, 34);
+            this.pictureBox2.TabIndex = 32;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -376,6 +389,7 @@
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.LogoutPanel.ResumeLayout(false);
             this.panelContainer.ResumeLayout(false);
@@ -383,8 +397,9 @@
             this.Sidebar.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.ProductPanel.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            this.ProductPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -411,5 +426,6 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Timer ProductTimer;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

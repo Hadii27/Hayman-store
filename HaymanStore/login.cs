@@ -1,4 +1,5 @@
 ﻿using HaymanStore.DB;
+using HaymanStore.Screens;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,9 +13,9 @@ using System.Windows.Forms;
 
 namespace HaymanStore
 {
-    public partial class Form1 : Form
+    public partial class login : Form
     {
-        public Form1()
+        public login()
         {
             Juxon_storeEntities db = new Juxon_storeEntities();
             InitializeComponent();
@@ -22,14 +23,16 @@ namespace HaymanStore
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Thread th = new Thread(openform);
-            th.SetApartmentState(ApartmentState.STA);
-            th.Start();
+            
+            var OpenForms = Application.OpenForms.Cast<Form>();
+            var isOpen = OpenForms.Any(q => q.Name == "Main");
+            if (!isOpen)
+            {
+                Main frm = new Main(this);
+                frm.Show();
+                this.Hide();
+            }
         }
-        void openform()
-        {
-            Application.Run(new Screens.Main());
-        }
+      
     }
 }

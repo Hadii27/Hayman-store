@@ -14,11 +14,16 @@ namespace HaymanStore.Screens
     {
         bool sidebarExpand;
         bool productExpand;
-
+        private login _login;
         public Main()
         {
             InitializeComponent();
 
+        }
+        public Main(login login)
+        {
+            InitializeComponent();
+            login = _login;
         }
 
         private void addUsercontrol(UserControl userControl)
@@ -28,8 +33,6 @@ namespace HaymanStore.Screens
             panelContainer.Controls.Add(userControl);
 
         }
-
-       
 
         private void button5_Click(object sender, EventArgs e)
         {
@@ -48,8 +51,6 @@ namespace HaymanStore.Screens
            BuyingControl uc = new BuyingControl();
             addUsercontrol(uc);
         }
-
-
 
         private void button14_Click(object sender, EventArgs e)
         {
@@ -138,6 +139,27 @@ namespace HaymanStore.Screens
         {
             ManageProduct uc = new ManageProduct();
             addUsercontrol(uc);
+        }
+
+        private void Main_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            var OpenForms = Application.OpenForms.Cast<Form>();
+            var isOpen = OpenForms.Any(q=> q.Name == "login");
+            if (!isOpen)
+            {
+                login frm = new login();
+                frm.Show();
+
+            }
+            else
+            {
+                _login.Close();
+            }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
