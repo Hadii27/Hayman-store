@@ -213,7 +213,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 72F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label1.Location = new System.Drawing.Point(449, 199);
+            this.label1.Location = new System.Drawing.Point(447, 190);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(331, 136);
             this.label1.TabIndex = 30;
