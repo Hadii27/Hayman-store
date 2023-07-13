@@ -23,15 +23,22 @@ namespace HaymanStore
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-            var OpenForms = Application.OpenForms.Cast<Form>();
-            var isOpen = OpenForms.Any(q => q.Name == "Main");
-            if (!isOpen)
+            if (txtUsername.Text == "Admin" && txtPassword.Text == "Admin")
             {
-                Main frm = new Main(this);
-                frm.Show();
-                this.Hide();
+                var OpenForms = Application.OpenForms.Cast<Form>();
+                var isOpen = OpenForms.Any(q => q.Name == "Main");
+                if (!isOpen)
+                {
+                    Main frm = new Main(this);
+                    frm.Show();
+                    this.Hide();
+                }
             }
+            else
+            {
+                MessageBox.Show("Invalid Username or Password");
+            }
+        
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
